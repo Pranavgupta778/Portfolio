@@ -1,0 +1,139 @@
+:root {
+  --bg-color: #121212;
+  --primary-color: #1db954;
+  --accent-color: #ff5c5c;
+  --text-color: #ffffff;
+  --input-bg: #1e1e1e;
+  --font: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font);
+  color: var(--text-color);
+}
+
+nav {
+  padding: 1em 2em;
+  background: #1a1a1a;
+}
+
+.back-link {
+  text-decoration: none;
+  color: greenyellow;
+  font-weight: bold;
+}
+
+.back-link i {
+  margin-right: 6px;
+}
+
+.back-link:hover {
+  color: var(--primary-color);
+}
+.contact-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--input-bg);
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.btn-submit {
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #17a64a;
+}
+.alert {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.alert.success {
+  background-color: #1db954;
+  color: #fff;
+}
+
+.alert.error {
+  background-color: #ff5c5c;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-section {
+    width: 90%;
+    padding: 10px;
+  }
+}
